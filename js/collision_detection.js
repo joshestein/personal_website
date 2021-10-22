@@ -50,6 +50,6 @@ function ticked() {
     context.font = "3rem monospace";
     context.fillStyle = "white";
     context.textAlign = "center";
-    context.fillText("Josh Stein", width/2, height/2);
+    context.fillText("Josh Stein", width/2, height/1.75);
     context.globalCompositeOperation = 'destination-over';
 }

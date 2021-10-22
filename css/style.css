@@ -88,12 +88,11 @@ p {
   height: auto;
   background-color: var(--main-green);
   color: white;
-  padding-top: 7.25rem;
   padding-bottom: 2.2rem;
 }
 
-.welcome-section h1 {
-  padding-bottom: 0.75rem;
+.welcome-section canvas {
+  display: block;
 }
 
 .welcome-section p {

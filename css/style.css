@@ -1,6 +1,6 @@
 :root {
   --main-green: #448051;
-  --baby-blue: #ADCED6;
+  --baby-blue: #adced6;
 }
 
 * {
@@ -22,7 +22,7 @@ html {
   font-size: 62.5%;
 }
 
-@media(max-width: 720px) {
+@media (max-width: 720px) {
   html {
     font-size: 60%;
   }
@@ -200,4 +200,3 @@ button:hover {
   color: black;
   cursor: pointer;
 }
-

@@ -1,9 +1,8 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
-// import PageLayout from "@layouts/PageLayout.astro";
+import BackToPrev from "@components/BackToPrev.astro";
 import Container from "@components/Container.astro";
 // import FormattedDate from "@components/FormattedDate.astro";
-// import BackToPrev from "@components/BackToPrev.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -21,9 +20,9 @@ const { Content } = await render(project);
 
 <BaseLayout title={project.data.title} description={project.data.description}>
   <Container>
-    <!--<div class="animate">-->
-    <!--  <BackToPrev href="/projects"> Back to projects</BackToPrev>-->
-    <!--</div>-->
+    <div class="animate">
+      <BackToPrev href="/projects"> Back to projects</BackToPrev>
+    </div>
     <div class="my-10 space-y-1">
       <div class="animate flex items-center gap-1.5">
         <!--<div class="font-base text-sm">-->

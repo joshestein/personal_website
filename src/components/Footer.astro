@@ -5,16 +5,16 @@ import { SITE } from "@constants";
 
 <footer class="animate">
   <Container>
-    <div class="flex justify-between items-center">
+    <div class="flex items-center justify-between">
       <div>
         &copy; 2025 {`|`}
         {SITE.NAME}
       </div>
-      <div class="flex flex-wrap gap-1 items-center">
+      <div class="flex flex-wrap items-center gap-1">
         <button
           id="light-theme-button"
           aria-label="Light theme"
-          class="group size-8 flex items-center justify-center rounded-full"
+          class="group flex size-8 items-center justify-center rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ import { SITE } from "@constants";
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
+            class="transition-colors duration-300 ease-in-out group-hover:stroke-black group-hover:dark:stroke-white"
           >
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -42,7 +42,7 @@ import { SITE } from "@constants";
         <button
           id="dark-theme-button"
           aria-label="Dark theme"
-          class="group size-8 flex items-center justify-center rounded-full"
+          class="group flex size-8 items-center justify-center rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ import { SITE } from "@constants";
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
+            class="transition-colors duration-300 ease-in-out group-hover:stroke-black group-hover:dark:stroke-white"
           >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>

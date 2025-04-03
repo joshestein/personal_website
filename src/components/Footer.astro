@@ -1,9 +1,13 @@
 ---
 import Container from "@components/Container.astro";
 import { SITE } from "@constants";
+
+// I don't like animating when we are reading some sort of slug (e.g. blog post or project).
+const pathPieces = Astro.url.pathname.split("/");
+const isSlug = pathPieces.length > 2;
 ---
 
-<footer class="animate">
+<footer class={`${isSlug ? "" : "animate"}`}>
   <Container>
     <div class="flex items-center justify-between">
       <div>

@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+html {
+    overflow-y: scroll;
+    color-scheme: light;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
 footer {
     @apply py-5 text-sm;
 }

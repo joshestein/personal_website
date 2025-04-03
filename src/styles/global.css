@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+footer {
+    @apply py-5 text-sm;
+}

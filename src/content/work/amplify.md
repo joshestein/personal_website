@@ -1,7 +1,7 @@
 ---
 company: "Amplify Education / Mathigon"
 role: "Software Engineer"
-dateStart: "01/03/2021"
+dateStart: "2021-03-01"
 dateEnd: "Current"
 ---
 

@@ -1,8 +1,8 @@
 ---
 company: "Superbalist"
 role: "Software Engineer Intern"
-dateStart: "01/06/2018"
-dateEnd: "01/07/2018"
+dateStart: "2018-06-01"
+dateEnd: "2018-07-01"
 ---
 
 Interned for 4 weeks, working with the Growth team. We were responsible for attracting new customers to the platform and

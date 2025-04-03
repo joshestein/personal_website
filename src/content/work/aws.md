@@ -1,8 +1,8 @@
 ---
 company: "AWS"
 role: "Software Engineer Intern"
-dateStart: "01/11/2019"
-dateEnd: "01/02/2020"
+dateStart: "2019-11-01"
+dateEnd: "2020-02-01"
 ---
 
 3-month internship working on back-end support. I chose to work primarily in Python, although was exposed to some Ruby

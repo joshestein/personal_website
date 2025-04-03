@@ -1,8 +1,8 @@
 ---
 company: "Avelios Medical"
 role: "Software Engineer"
-dateStart: "01/10/2022"
-dateEnd: "31/12/2022"
+dateStart: "2022-10-01"
+dateEnd: "2023-01-01"
 ---
 
 Avelios is working towards replacing hospital infrastructure with modern, modular software. I firmly believe in the

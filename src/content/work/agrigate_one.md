@@ -1,8 +1,8 @@
 ---
 company: "Agrigate One"
 role: "Software Engineer"
-dateStart: "01/03/2020"
-dateEnd: "01/09/2020"
+dateStart: "2020-03-01"
+dateEnd: "2020-09-01"
 ---
 
 I gained extensive experience working with a small team contributing to a platform dedicated to aggregating and

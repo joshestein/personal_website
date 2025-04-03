@@ -1,8 +1,8 @@
 ---
 company: "College of Magic"
 role: "Teacher"
-dateStart: "01/01/2015"
-dateEnd: "01/09/2020"
+dateStart: "2015-01-01"
+dateEnd: "2020-09-01"
 ---
 
 Volunteer teacher of magic, illusions, performance theory and showmanship. I have taught students aged 9-17. Finding

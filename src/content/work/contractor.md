@@ -1,7 +1,7 @@
 ---
 company: "Private Contractor"
 role: "Software Engineer"
-dateStart: "01/01/2025"
+dateStart: "2025-01-01"
 dateEnd: "Current"
 ---
 

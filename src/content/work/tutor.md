@@ -1,8 +1,8 @@
 ---
 company: "Eureka Tutors"
 role: "Tutor"
-dateStart: "01/01/2014"
-dateEnd: "01/01/2017"
+dateStart: "2014-01-01"
+dateEnd: "2017-01-01"
 ---
 
 I started Eureka Tutors, a private company aimed at providing top quality tutors to students in need. I have tutored

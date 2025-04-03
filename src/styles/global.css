@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
     overflow-y: scroll;
     color-scheme: light;
@@ -7,6 +9,13 @@ html {
 
 html.dark {
     color-scheme: dark;
+}
+
+body {
+    @apply font-sans antialiased;
+    @apply flex flex-col;
+    @apply bg-stone-100 dark:bg-stone-900;
+    @apply text-black/50 dark:text-white/75;
 }
 
 footer {

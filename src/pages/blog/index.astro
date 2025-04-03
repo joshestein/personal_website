@@ -1,6 +1,25 @@
 ---
+import Container from "@components/Container.astro";
 import { BLOG } from "@constants";
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION} />
+<BaseLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
+  <Container>
+    <div class="space-y-8">
+      <h4 class="animate font-semibold text-black dark:text-white">{BLOG.TITLE}</h4>
+      <p class="animate text-black dark:text-white">
+        I'm a long-time lurker, and haven't written anything yet. But check back soon!
+      </p>
+      <!--<ul class="animate flex flex-col gap-4">-->
+      <!--  {-->
+      <!--    projects.map((project) => (-->
+      <!--      <li>-->
+      <!--        <ArrowCard entry={project} />-->
+      <!--      </li>-->
+      <!--    ))-->
+      <!--  }-->
+      <!--</ul>-->
+    </div>
+  </Container>
+</BaseLayout>

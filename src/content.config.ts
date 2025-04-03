@@ -21,12 +21,11 @@ const work = defineCollection({
 });
 
 const projects = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.md", base: "./src/content/projects" }),
+  loader: glob({ pattern: "**/[^_]*.(md|mdx)", base: "./src/content/projects" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    repoURL: z.string().optional(),
   }),
 });
 

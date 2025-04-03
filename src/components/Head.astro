@@ -24,22 +24,11 @@ const { title, description } = Astro.props;
     preloadTheme();
     animate();
 
-    const lightThemeButton = document.getElementById("light-theme-button");
-    lightThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "light");
-      toggleTheme(false);
-    });
-
-    const darkThemeButton = document.getElementById("dark-theme-button");
-    darkThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "dark");
-      toggleTheme(true);
-    });
-
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
-      if (localStorage.theme === "system") {
-        toggleTheme(event.matches);
-      }
+    const toggleThemeButton = document.getElementById("toggle-theme-button");
+    toggleThemeButton?.addEventListener("click", () => {
+      const wantsDark = !document.documentElement.classList.contains("dark");
+      toggleTheme(wantsDark);
+      localStorage.setItem("theme", wantsDark ? "dark" : "light");
     });
   }
 
@@ -77,21 +66,25 @@ const { title, description } = Astro.props;
       document.documentElement.classList.remove("dark");
     }
 
+    // Force repaint before removing temp CSS
     window.getComputedStyle(css).opacity;
     document.head.removeChild(css);
   }
 
   function preloadTheme() {
     const userTheme = localStorage.theme;
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    if (userTheme === "light" || userTheme === "dark") {
-      toggleTheme(userTheme === "dark");
+    if (userTheme === "dark" || (!userTheme && systemTheme)) {
+      document.documentElement.classList.add("dark");
     } else {
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      document.documentElement.classList.remove("dark");
     }
   }
 
   document.addEventListener("DOMContentLoaded", () => init());
   document.addEventListener("astro:after-swap", () => init());
+
+  // Run preload immediately to prevent FOUC
   preloadTheme();
 </script>

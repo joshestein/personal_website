@@ -18,6 +18,12 @@ body {
     @apply text-black/50 dark:text-white/75;
 }
 
+header {
+    @apply py-5;
+    @apply bg-stone-100/75 dark:bg-emerald-950/25;
+    @apply backdrop-blur-sm saturate-200;
+}
+
 footer {
     @apply py-5 text-sm;
 }

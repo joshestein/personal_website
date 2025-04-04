@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  @apply py-5;
+  @apply fixed top-0 right-0 left-0 z-1 py-5;
   @apply bg-stone-100/75 dark:bg-emerald-950/25;
   @apply saturate-200 backdrop-blur-sm;
 }

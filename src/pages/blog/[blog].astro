@@ -1,0 +1,42 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import BackToPrev from "@components/BackToPrev.astro";
+import Container from "@components/Container.astro";
+// import FormattedDate from "@components/FormattedDate.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const blog = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return blog.map((project) => ({
+    params: { blog: project.id },
+    props: project,
+  }));
+}
+type Props = CollectionEntry<"projects">;
+
+const project = Astro.props;
+const { Content } = await render(project);
+---
+
+<BaseLayout title={project.data.title} description={project.data.description}>
+  <Container>
+    <BackToPrev href="/projects"> Back to projects</BackToPrev>
+    <div class="my-10 space-y-1">
+      <div class="flex items-center gap-1.5">
+        <!--<div class="font-base text-sm">-->
+        <!--  <FormattedDate date={project.data.date} />-->
+        <!--</div>-->
+        <!--&bull;-->
+        <!--<div class="font-base text-sm">-->
+        <!--  {readingTime(project.body)}-->
+        <!--</div>-->
+      </div>
+      <div class="text-2xl font-semibold text-black dark:text-white">
+        {project.data.title}
+      </div>
+    </div>
+    <article>
+      <Content />
+    </article>
+  </Container>
+</BaseLayout>

@@ -1,7 +1,11 @@
 ---
+import ArrowCard from "@components/ArrowCard.astro";
 import Container from "@components/Container.astro";
 import { BLOG } from "@constants";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const blog = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <BaseLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>

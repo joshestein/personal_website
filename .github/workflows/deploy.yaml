@@ -22,11 +22,11 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v3
 
-  deploy:
+  deploy-gh-pages:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: production
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages

@@ -12,15 +12,15 @@ export async function getStaticPaths() {
     props: project,
   }));
 }
-type Props = CollectionEntry<"projects">;
+type Props = CollectionEntry<"blog">;
 
-const project = Astro.props;
-const { Content } = await render(project);
+const blog = Astro.props;
+const { Content } = await render(blog);
 ---
 
-<BaseLayout title={project.data.title} description={project.data.description}>
+<BaseLayout title={blog.data.title} description={blog.data.description}>
   <Container>
-    <BackToPrev href="/projects"> Back to projects</BackToPrev>
+    <BackToPrev href="/blog"> Back to blogs</BackToPrev>
     <div class="my-10 space-y-1">
       <div class="flex items-center gap-1.5">
         <!--<div class="font-base text-sm">-->
@@ -32,7 +32,7 @@ const { Content } = await render(project);
         <!--</div>-->
       </div>
       <div class="text-2xl font-semibold text-black dark:text-white">
-        {project.data.title}
+        {blog.data.title}
       </div>
     </div>
     <article>

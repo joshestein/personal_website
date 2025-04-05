@@ -28,7 +28,7 @@ header {
 }
 
 main {
-  @apply flex-1 py-16;
+  @apply flex-1 py-28;
 }
 
 article {

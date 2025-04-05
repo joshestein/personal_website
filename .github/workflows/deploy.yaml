@@ -53,8 +53,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: ./dist
-
+          path: .
+      - name: Extract artifact
+        run: |
+          mkdir -p dist
+          tar xzf artifact.tar -C dist
+          ls -l dist
       - name: Deploy to VPS via SSH using rsync
         uses: easingthemes/ssh-deploy@v5.1.0
         with:

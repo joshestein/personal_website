@@ -2,7 +2,7 @@
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import BackToPrev from "@components/BackToPrev.astro";
 import Container from "@components/Container.astro";
-// import FormattedDate from "@components/FormattedDate.astro";
+import FormattedDate from "@components/FormattedDate.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -23,9 +23,9 @@ const { Content } = await render(blog);
     <BackToPrev href="/blog"> Back to blogs</BackToPrev>
     <div class="my-10 space-y-1">
       <div class="flex items-center gap-1.5">
-        <!--<div class="font-base text-sm">-->
-        <!--  <FormattedDate date={project.data.date} />-->
-        <!--</div>-->
+        <div class="font-base text-sm">
+          <FormattedDate date={blog.data.date} />
+        </div>
         <!--&bull;-->
         <!--<div class="font-base text-sm">-->
         <!--  {readingTime(project.body)}-->

@@ -19,3 +19,8 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Ignore draft content (starts with underscore)
+**/blog/_*
+**/projects/_*
+**/work/_*

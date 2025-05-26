@@ -24,14 +24,14 @@ export default defineConfig({
       },
       securityHeaders: {
         contentSecurityPolicy: {
-          cspDirectives: {
-            "default-src": "'self'",
-            "style-src": "'self'",
-            "font-src": "'self' data:",
-            "base-uri": "'self'",
-            "frame-ancestors": "'none'",
-            "script-src": "'self'",
-          },
+          // cspDirectives: {
+          // "default-src": "'self'",
+          // "style-src": "'self'",
+          // "font-src": "'self' data:",
+          // "base-uri": "'self'",
+          // "frame-ancestors": "'none'",
+          // "script-src": "'self'",
+          // },
         },
       },
     }),
